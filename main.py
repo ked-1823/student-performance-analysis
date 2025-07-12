@@ -6,7 +6,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 url="https://raw.githubusercontent.com/YBI-Foundation/Dataset/main/Students%20Performance.csv"
+
 df=pd.read_csv(url)
+df.to_csv("Students Performance.csv",index=False)
 
 print(df.head())
 print(df.isnull().sum())
